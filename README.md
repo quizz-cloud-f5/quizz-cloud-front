@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/quizz-cloud-f5/quizz-cloud-front/actions/workflows/ci.yml/badge.svg)
 
-Quizz App is an application for creating and managing quizzes focused on certifications like AWS, Azure, and more.
+Quizz App is an application for creating and managing quizzes focused on certifications like AWS.
 
 ---
 
