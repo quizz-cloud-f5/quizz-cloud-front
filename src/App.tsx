@@ -1,9 +1,10 @@
 import "./App.css";
-import Page from "./page";
+import DashboardPage from "./modules/dashboard/dashboard-page";
+
 
 function App() {
   return (
-    <Page />
+    <DashboardPage />
   );
 }
 
