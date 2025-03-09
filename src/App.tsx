@@ -1,11 +1,18 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import "./App.css";
 import LoginPage from "./modules/auth/login-page";
-import DashboardPage from "./modules/dashboard/dashboard-page";
+import HomePage from "./modules/home/home-page";
+
 
 
 function App() {
   return (
-    <LoginPage />
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </Router>
   );
 }
 
