@@ -1,4 +1,4 @@
-import { LucideFileQuestion, LucideMessageCircleQuestion, PiIcon } from "lucide-react"
+import { PiIcon } from "lucide-react"
 
 import { LoginForm } from "@/modules/auth/components/login-form"
 import { Link } from "react-router-dom"

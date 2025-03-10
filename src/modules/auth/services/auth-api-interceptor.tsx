@@ -1,17 +1,17 @@
 import axios from "axios";
 
-// Obtener el token desde localStorage o cookies
+// Obtain the token from local storage
 const getToken = () => localStorage.getItem("token");
 
-// Crear una instancia de Axios
+// Create an axios instance
 const api = axios.create({
-    baseURL: "http://localhost:8080", // Reemplázalo con tu API
+    baseURL: "http://localhost:8080",
     headers: {
         "Content-Type": "application/json",
     },
 });
 
-// Interceptor para agregar el token en cada solicitud
+// Interceptor to add the token to the request headers
 api.interceptors.request.use(
     (config) => {
         const token = getToken();
@@ -23,12 +23,12 @@ api.interceptors.request.use(
     (error) => Promise.reject(error)
 );
 
-// Interceptor para manejar respuestas no autorizadas
+// Interceptor to handle unauthorized requests
 api.interceptors.response.use(
     (response) => response,
     (error) => {
         if (error.response?.status === 401) {
-            // Si la respuesta es 401, redirigir al login
+            // If unauthorized, redirect to login
             window.location.href = "/login";
         }
         return Promise.reject(error);
