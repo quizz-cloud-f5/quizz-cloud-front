@@ -3,6 +3,9 @@ name: Docker Build and Publish
 on:
   release:
     types: [published] # Se ejecuta al publicar un release
+  push:
+    tags:
+      - '*'
   workflow_dispatch: # Permite ejecutar manualmente desde GitHub Actions
 
 jobs:
