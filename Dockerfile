@@ -15,6 +15,9 @@ RUN apt-get update && apt-get install -y python3 make g++ && \
 # Copia todo el código fuente al contenedor
 COPY . .
 
+ARG VITE_API_URL
+ENV VITE_API_URL=http://backend:8080
+
 # Construye la aplicación para producción
 RUN npm run build
 
